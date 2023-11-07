@@ -1,0 +1,39 @@
+:root {
+  --hover-text: #6d28d9;
+  --primary: #374151;
+  --secondary: #729ac2;
+  background-color: #cbd5e1;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 8fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  grid-area: 1 / 1 / 2 / -1;
+
+}
+
+.main {
+  margin: .5rem;
+  margin-left: .5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+
+

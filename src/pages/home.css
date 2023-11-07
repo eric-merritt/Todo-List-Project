@@ -1,0 +1,7 @@
+.home {
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: .25rem;
+  height: 100%;
+  justify-items: center;
+}

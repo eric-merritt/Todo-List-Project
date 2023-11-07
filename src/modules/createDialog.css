@@ -1,0 +1,127 @@
+formgroup,
+div,
+ul,
+li,
+select,
+option {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+select:nth-child(1),
+select,
+input {
+  margin: .25rem;
+  padding: .5rem;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+label {
+  font-weight: 600;
+  margin: .5rem;
+  padding: 0;
+}
+
+dialog {
+  padding: 2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px  #949393;
+}
+
+
+input[type="button"],
+input[type="submit"] {
+  font-weight: 800;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 1rem;
+  flex: 1;
+}
+
+input[type="submit"] {
+  background-color: rgb(23, 182, 102);
+  opacity: .75;
+}
+
+formgroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+  opacity: 100%;
+}
+
+div {
+  width: 100%;
+  overflow: hidden;
+}
+
+#hiddenTaskDiv > label {
+  align-self: center;
+  font-weight: 400;
+}
+
+.inputDiv {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.taskInput {
+  flex: 1 1 auto;
+}
+
+#task {
+  background-color: #38bdf8;
+  opacity: 0.75;
+  margin: .25rem;
+  padding: .5rem;
+}
+
+#task:hover {
+  opacity: 1;
+}
+
+input[type="button"].taskDelete {
+  flex: 1 1 auto;
+  font-size: 1rem;
+  width: 1rem;
+  padding: .5rem;
+  border-radius: 5px;
+  background: red;
+  opacity: 0.75;
+  color: black;
+}
+
+input[type="button"].taskDelete:hover {
+  opacity: 1;
+}
+
+.descriptionGroup,
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#description {
+  text-wrap: wrap;
+  word-wrap: break-word;
+  line-break: auto;
+  max-lines: 10;
+}
