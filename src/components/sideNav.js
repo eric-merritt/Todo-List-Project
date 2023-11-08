@@ -1,5 +1,7 @@
-import { getCategories, getProjects, getProject, getTodos } from '../data/getData.js';
+import { getCategories } from '../data/getData.js';
 import './sideNav.css';
+import { printPage } from '../modules/printPage.js';
+import { project } from '../pages/project.js';
 
 export const sideNav = () => {
 const storage = window.localStorage;
@@ -16,14 +18,14 @@ const storage = window.localStorage;
     navLinkList.appendChild(linkListTitle);
     categories.forEach(index => {
         let navLink = document.createElement('li');
-        navLink.classList.add('nav-link');
-        navLink.addEventListener('click', (event) => {
-          event.target.nextSibling.classList.toggle('open');
-        });
-          
+        navLink.classList.add(index.charAt(0).toLowerCase() + index.slice(1) + '-nav-link');
         let dropdownLink = document.createElement('a');
         dropdownLink.setAttribute('href', '#');
         dropdownLink.classList.add('dropdown-link');
+        dropdownLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.target.nextElementSibling.classList.toggle('open');
+        });
         dropdownLink.innerHTML = `${index}`;
         navLink.appendChild(dropdownLink);
         let dropdown = document.createElement('ul');
@@ -33,12 +35,16 @@ const storage = window.localStorage;
         categoryProjects.forEach(index => {
                 let dropdownItem = document.createElement('li');
                 dropdownItem.classList.add('dropdown-item');
-                dropdownItem.innerHTML = `<a href="#${index.id}">${index.name}</a>`;
-                // dropdownItem.onClick = () => {
-                //   let project = getProject(index.id);
-                //   let todos = getTodos(project);
-                //   printPage(project, todos);
-                // }
+                let dropdownItemLink = document.createElement('a');
+                dropdownItemLink.setAttribute('href', '#');
+                dropdownItemLink.classList.add('dropdown-item-link');
+                dropdownItemLink.textContent = index.name;
+                dropdownItemLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    project(index.id);
+                });
+                dropdownItem.appendChild(dropdownItemLink);
+                
                 dropdown.appendChild(dropdownItem);
                 navLink.appendChild(dropdown);
             navLinkList.appendChild(navLink);

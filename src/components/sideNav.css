@@ -63,11 +63,15 @@ li > ul.open {
 }
 
 .dropdown-link:first-child:hover {
-  background-color: var(--hover-text);
+  background-color: white;
   color: var(--secondary);
 }
 
 .dropdown-item {
   position: relative;
   list-style: none;
+}
+
+#add-btn {
+  float: right;
 }

@@ -8,6 +8,7 @@ import { randomBytes } from 'crypto';
 
 const storage = window.localStorage;
 
+
 // if (storage) {
 //   console.log('Storage is available');
 // };
@@ -34,7 +35,6 @@ const exampleTodo = () => {
     'Low',
     false,
   );
-  storage.setItem(id, JSON.stringify(sample));
   return sample;
   };
 
@@ -43,7 +43,7 @@ const exampleTodo = () => {
 
     const project = createProject(
       randomBytes(8).toString('hex'),
-      'Example Project',
+      `${category} Project`,
       [exampleTodo(), exampleTodo(), exampleTodo()],
       category,
     );  
