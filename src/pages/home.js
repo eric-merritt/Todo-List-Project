@@ -3,8 +3,11 @@ import './home.css';
 
 export const home = () => {
   
+
   const homeDiv = document.createElement('div');
   homeDiv.classList.add('home');
+
+  homeDiv.id = 'home';  
 
   let storage = window.localStorage;
 
@@ -23,3 +26,4 @@ export const home = () => {
     homeDiv
   );
 };
+

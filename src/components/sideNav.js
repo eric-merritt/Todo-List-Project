@@ -14,7 +14,7 @@ const storage = window.localStorage;
     navLinkList.classList.add('nav-link-list');
     let linkListTitle = document.createElement('li');
     linkListTitle.classList.add('link-list-title');
-    linkListTitle.innerHTML = '<h2>Projects</h2>';
+    linkListTitle.innerHTML = '<h3>Project Categories</h3>';
     navLinkList.appendChild(linkListTitle);
     categories.forEach(index => {
         let navLink = document.createElement('li');
@@ -38,10 +38,10 @@ const storage = window.localStorage;
                 let dropdownItemLink = document.createElement('a');
                 dropdownItemLink.setAttribute('href', '#');
                 dropdownItemLink.classList.add('dropdown-item-link');
-                dropdownItemLink.textContent = index.name;
+                dropdownItemLink.textContent = index.title;
                 dropdownItemLink.addEventListener('click', (e) => {
                     e.preventDefault();
-                    project(index.id);
+                    printPage(project(index.id));
                 });
                 dropdownItem.appendChild(dropdownItemLink);
                 

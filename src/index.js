@@ -3,8 +3,13 @@ import { format } from 'date-fns';
 import { createDialog } from './modules/createDialog.js';
 import './index.css';
 import { getProjects, getCategories, getProject, getTodos } from './data/getData.js';
-import { printPage } from './modules/printPage.js';
+import { printPage, currentPage } from './modules/printPage.js';
 import { randomBytes } from 'crypto';
+import { home } from './pages/home.js';
+import { project } from './pages/project.js';
+import { profile } from './pages/profile.js';
+
+
 
 const storage = window.localStorage;
 
@@ -62,6 +67,6 @@ storage.setItem('projects', JSON.stringify(projects));
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  printPage('home');
+  printPage(home());
 });
 

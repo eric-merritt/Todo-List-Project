@@ -12,11 +12,11 @@ export const createTodo = (id, title, description, taskList, dueDate, priority, 
   } 
 }
 
-export const createProject = ( id, name, todos, category ) => {
+export const createProject = ( id, title, todos, category ) => {
   
   return {
     id: id,
-    name: name,
+    title: title,
     todoList: todos,
     category,
   }

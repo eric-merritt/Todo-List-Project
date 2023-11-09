@@ -28,6 +28,10 @@ html, body {
 
 }
 
+.heading {
+  text-wrap: nowrap;
+}
+
 .main {
   margin: .5rem;
   margin-left: .5rem;

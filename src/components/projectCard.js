@@ -8,7 +8,7 @@ export const projectCard = (project) => {
   
   const projectCardTitle = document.createElement('h2');
   projectCardTitle.classList.add('project-card-title');
-  projectCardTitle.textContent = project.name;
+  projectCardTitle.textContent = project.title;
   projectCardDiv.appendChild(projectCardTitle);
 
   const projectCardCategory = document.createElement('h3');

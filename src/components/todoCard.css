@@ -16,3 +16,10 @@
   background-color: var(--secondary);
   border-radius: .5rem .5rem 0 0;
 }
+
+.todo-description,
+.todo-task-list,
+.todo-due-date,
+.todo-priority {
+  padding-left: 1rem;
+}

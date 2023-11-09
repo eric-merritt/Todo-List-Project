@@ -14,7 +14,7 @@ export const todoCard = (todo) => {
 
   let todoDescription = document.createElement('p');
   todoDescription.classList.add('todo-description');
-  todoDescription.textContent = 'Description: ' + todo.description;
+  todoDescription.textContent = 'Description:' + '\n' + todo.description;
   todoCardDiv.appendChild(todoDescription);
 
   let todoTaskList = document.createElement('ul');
