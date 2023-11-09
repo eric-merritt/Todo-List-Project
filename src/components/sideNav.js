@@ -109,7 +109,6 @@ filterFieldset.appendChild(personalLabel);
 filterFieldset.addEventListener('change', (e) => {
     let category = e.target.value;
     const categoryDropdown = document.querySelector(`.${category.charAt(0).toLowerCase() + category.slice(1)}-nav-link`);
-    console.log(categoryDropdown.firstChild.nextSibling)
     categoryDropdown.classList.toggle('hidden');
 
      // ensures that when a category is hidden, its dropdown is closed

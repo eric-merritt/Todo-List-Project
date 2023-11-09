@@ -16,7 +16,7 @@ module.exports = {
   devtool: 'eval-source-map', // 'eval-source-map
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   resolve: {
     fallback: {

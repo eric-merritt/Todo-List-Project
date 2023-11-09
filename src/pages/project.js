@@ -16,10 +16,8 @@ export const project = (id) => {
 
   let targetProject = projects.filter(project => project.id === id)[0];
 
-  console.log(targetProject)
 
   let todos = getTodos(targetProject);
-  console.log(targetProject)
 
   if (!todos) {
     return;

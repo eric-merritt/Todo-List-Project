@@ -30,7 +30,6 @@ export const todoCard = (todo) => {
   let todoIndex = getTodoIndex(todoCard.id);
 
   projects[projectIndex].todoList.splice(todoIndex, 1);
-  console.log(projects[projectIndex].todoList)
   storage.setItem('projects', JSON.stringify(projects));
   
   todoCard.remove();
@@ -70,7 +69,6 @@ export const todoCard = (todo) => {
 
   let todoDueDate = document.createElement('p');
   todoDueDate.classList.add('todo-due-date');
-   console.log(todo.dueDate);
   let date = todo.dueDate.slice(0,10);
   todoDueDate.textContent = format(new Date(date), 'MM/dd/yyyy');
   todoCardDiv.appendChild(todoDueDate);
