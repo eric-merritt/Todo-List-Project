@@ -1,5 +1,6 @@
 import { projectCard } from '../components/projectCard.js';
 import './home.css';
+import { toolbar } from '../components/toolbar.js';
 
 export const home = () => {
   
@@ -7,7 +8,10 @@ export const home = () => {
   const homeDiv = document.createElement('div');
   homeDiv.classList.add('home');
 
-  homeDiv.id = 'home';  
+  homeDiv.id = 'home';
+
+  let tools = toolbar();
+  homeDiv.appendChild(tools);
 
   let storage = window.localStorage;
 

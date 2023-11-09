@@ -1,13 +1,16 @@
 import { layout } from '../pages/layout.js';
 import { closeIcon } from '../components/icons.js';
+import { printModal, createTodoModal } from './modals.js';
 
 export const printPage = (page) => {
 
   const container = document.querySelector('.container');
-  container.appendChild(layout());
+
+  const pageLayout = layout();
+  container.replaceChildren(pageLayout);
 
   const heading = document.querySelector('.heading');
-  heading.textContent = page.id === 'home' ? 'Home' : page.id === 'profile' ? 'Profile' : page.id;
+  heading.textContent = page.id === 'home' ? 'Home' : page.id === 'profile' ? 'User Profile' : page.id;
 
  
   const pageDescription = document.querySelector('.page-description');
@@ -17,7 +20,7 @@ export const printPage = (page) => {
 
   };
 
-  pageDescription.textContent = page.id === 'home' ? 'Welcome to your home page. Here you can view all of your projects.' : page.id === 'profile' ? 'Welcome to your profile page. Here you can view all of your personal details.' : 'This is a project specific page. Come here to view todos for a single project.';
+  pageDescription.textContent = page.id === 'home' ? 'Welcome to your home page. Here you can view all of your projects.' : page.id === 'profile' ? 'Welcome to your profile page. Here you can view all of your personal details.' : page.id === 'About' ? 'Welcome to the about page' : 'This is a project specific page. Come here to view todos for a single project.';
   
   const closeBtn = closeIcon();
   pageDescription.appendChild(closeBtn);
@@ -28,13 +31,8 @@ export const printPage = (page) => {
   const main = document.getElementById('main');
 
   main.replaceChildren(page);
+  
 
   return container;
 
 }
-
-export const currentPage = () => {
-  const main = document.getElementById('main');
-
-  return main.id;
-};

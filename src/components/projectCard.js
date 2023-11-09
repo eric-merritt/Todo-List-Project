@@ -1,10 +1,18 @@
 import './projectCard.css';
+import { printPage } from '../modules/printPage.js';
+import { project as renderProject} from '../pages/project.js';
 
 export const projectCard = (project) => {
 
   const projectCardDiv = document.createElement('div');
   projectCardDiv.classList.add('project-card');
   projectCardDiv.setAttribute('id', project.id);
+  projectCardDiv.addEventListener('click', (e) => {
+    let projectCard = e.target.closest('.project-card');
+    let projectId = projectCard.id;
+    let projectPage = renderProject(projectId);
+    printPage(projectPage);
+  });
   
   const projectCardTitle = document.createElement('h2');
   projectCardTitle.classList.add('project-card-title');

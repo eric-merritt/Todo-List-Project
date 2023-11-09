@@ -25,3 +25,22 @@ export const removeIcon = () => {
 
   return removeBtn;
 }
+
+export const trashIcon = () => {
+
+  let trashBtn = document.createElement('ion-icon');
+  trashBtn.setAttribute('name', 'trash-outline');
+  trashBtn.setAttribute('id', 'trash-btn');
+
+  return trashBtn;
+}
+
+export const downChevron = () => {
+
+  let downChevron = document.createElement('ion-icon');
+  downChevron.setAttribute('name', 'chevron-down-outline');
+  downChevron.setAttribute('id', 'down-chevron');
+  downChevron.setAttribute('class', 'down-chevron');
+
+  return downChevron;
+}

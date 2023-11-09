@@ -2,6 +2,8 @@ import { topNav } from '../components/topNav.js';  // import topNav component
 import { sideNav } from '../components/sideNav.js';  // import sideNav component
 import { closeIcon } from '../components/icons.js';  // import icon module
 
+import { toolbar } from '../components/toolbar.js';  // import toolbar component
+
 export const layout = () => {
 
   const container = document.createElement('div');
@@ -34,15 +36,16 @@ export const layout = () => {
     
   const sideBar = document.createElement('div');
     sideBar.classList.add('sidebar');
-    sideBar.appendChild(sideNav());
+    sideBar.appendChild(sideNav());  
 
   const mainContent = document.createElement('div');
     mainContent.classList.add('main');
     mainContent.setAttribute('id', 'main');
-
+  
   container.appendChild(header);
   container.appendChild(sideBar);
   container.appendChild(mainContent);
+
 
   return container;
 

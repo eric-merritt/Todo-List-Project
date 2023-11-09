@@ -2,7 +2,7 @@ import './topNav.css';
 import { printPage } from '../modules/printPage.js';
 import { home } from '../pages/home.js';
 import { profile } from '../pages/profile.js';
-// import { about } from '../pages/about.js';
+import { about } from '../pages/about.js';
 
 export const topNav = () => {
   const nav = document.createElement('nav');
@@ -39,7 +39,7 @@ export const topNav = () => {
     aboutLink.textContent = 'About';
     aboutLink.addEventListener('click', (e) => {
       e.preventDefault();
-      printPage('about');
+      printPage(about());
     });
     aboutBtn.appendChild(aboutLink);
 

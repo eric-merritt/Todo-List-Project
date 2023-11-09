@@ -17,7 +17,7 @@ html, body {
 
 .content {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 8fr;
   width: 100vw;
   height: 100vh;
@@ -29,13 +29,44 @@ html, body {
 }
 
 .heading {
-  text-wrap: nowrap;
+  width: clamp(12ch, 25ch, 40ch);
 }
 
 .main {
-  margin: .5rem;
-  margin-left: .5rem;
-  padding: 0.5rem;
+  padding: 1rem;
+  padding-top: .5rem;
   border-radius: 5px;
+  overflow-y: scroll;
 }
 
+.page-description {
+  margin-bottom: .25rem;
+}
+
+.page-description > ion-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+
+.open-tool-span {
+  border-radius: .5rem;
+  padding: .25rem;
+  float: right;
+}
+
+dialog[type="modal"] {
+  resize: both;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: auto;
+  
+}
